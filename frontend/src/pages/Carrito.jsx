@@ -1,6 +1,8 @@
 import { useCarrito } from "../context/CarritoContext";
 import "../styles/Carrito.css";
 
+
+// primera prueba del carrito 
 export default function Carrito() {
   const { carrito, eliminarProducto, vaciarCarrito, total } = useCarrito();
 

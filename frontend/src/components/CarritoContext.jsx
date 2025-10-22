@@ -2,6 +2,10 @@ import { createContext, useContext, useState } from "react";
 
 const CarritoContext = createContext();
 
+//agregares un similudor de productos 
+
+
+
 export function useCarrito() {
   return useContext(CarritoContext);
 }
