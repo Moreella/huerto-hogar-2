@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
+import '../styles/Nosotros.css';
 
 export default function Nosotros() {
   useEffect(() => {
@@ -10,7 +11,7 @@ export default function Nosotros() {
     <main>
       {/* Banner */}
       <section className="banner">
-        <img src="/img/nosotros1.jpg" alt="Banner Blog" />
+        <img src="/img/nosotros-2.jpg" alt="Nosotros" />
         <div className="banner-text">
           <h1>Huerto Hogar</h1>
           <p>Inicio &gt; Nosotros</p>
