@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Contacto from "./pages/Contacto";
-
 import Nosotros from "./pages/Nosotros";
+import Tienda from "./pages/Tienda";
 
 export default function App() {
   return (
@@ -16,6 +16,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/tienda" element={<Tienda />} />
       </Routes>
       <Footer />
     </BrowserRouter>
