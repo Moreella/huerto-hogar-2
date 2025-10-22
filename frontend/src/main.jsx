@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import "./css/index.css";
+import './styles/index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import './css/style-buttons.css'; 
+import './styles/style-buttons.css';
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(

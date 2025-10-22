@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "../css/style-buttons.css";
-import "../css/Navbar.css";
+import "../styles/style-buttons.css";
+import "../styles/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
