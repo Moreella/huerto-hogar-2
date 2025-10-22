@@ -36,7 +36,7 @@ export default function Navbar() {
               <Link className="nav-link" to="/nosotros">Nosotros</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/productos">Tienda</Link>
+              <Link className="nav-link" to="/tienda">Tienda</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contacto">Contacto</Link>
