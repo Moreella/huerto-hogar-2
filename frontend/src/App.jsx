@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import Tienda from "./pages/Tienda";
+import Carrito from "./pages/Carrito";
+
 
 export default function App() {
   return (
@@ -17,6 +19,7 @@ export default function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/tienda" element={<Tienda />} />
+        <Route path="/carrito" element={<Carrito />} />
       </Routes>
       <Footer />
     </BrowserRouter>

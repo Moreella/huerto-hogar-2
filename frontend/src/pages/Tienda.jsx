@@ -1,7 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Tienda.css';
+import { useCarrito } from "../context/CarritoContext";
 
 export default function Tienda() {
+  const { agregarProducto } = useCarrito();
+
+  // Aqui es donde se "ve" el producto esta creado como objeto
+  const producto = {
+    id: 1,
+    nombre: "Naranjas Valencia",
+    precio: 1000,
+    img: "/img/p2.jpg",
+    descripcion: "Fresca y 100% natural."
+  };
+
   return (
     <main className="container my-5">
       <section className="nosotros-section text-center mb-5">
@@ -16,27 +28,28 @@ export default function Tienda() {
         <div className="col-md-4">
           <div className="card h-100">
             <img
-              src="/img/p2.jpg"
-              alt="producto1"
+              src={producto.img}
+              alt={producto.nombre}
               className="card-img-top"
             />
             <div className="card-body d-flex flex-column">
-              <h5 className="card-title">Naranjas Valencia</h5>
-              <p className="card-text">Fresca y 100% natural.</p>
-              <p className="fw-bold text-success">$1.000</p>
-              
+              <h5 className="card-title">{producto.nombre}</h5>
+              <p className="card-text">{producto.descripcion}</p>
+              <p className="fw-bold text-success">
+                ${producto.precio.toLocaleString("es-CL")}
+              </p>
+
+              {/* Aquí se conecta con el carrito */}
               <button
-                className="btn btn-primary mt-auto add-to-cart"
-                data-nombre="Naranjas Valencia"
-                data-precio="1000"
-                data-imagen="/img/p2.jpg">
-                Añadir al carrito
-              </button>
-              
-              <button className="btn btn-secondary mt-auto add-to-cart">
-                Ver detalle
+                className="btn btn-success mt-auto"
+                onClick={() => agregarProducto(producto)}
+              >
+                Añadir al carrito 
               </button>
 
+              <button className="btn btn-secondary mt-2">
+                Ver detalle
+              </button>
             </div>
           </div>
         </div>
