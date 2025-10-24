@@ -31,7 +31,7 @@ export default function Nosotros() {
             data-bs-target="#modalQuienesSomos"
           >
             <img
-              src="/img/quienes_somos2.jpg"
+              src="/img/quienes_somos.jpg"
               alt="Quiénes Somos"
               className="img-fluid rounded"
             />
@@ -46,7 +46,7 @@ export default function Nosotros() {
             data-bs-target="#modalMision"
           >
             <img
-              src="/img/mision_vision.jpg"
+              src="/img/mision.jpg"
               alt="Misión"
               className="img-fluid rounded"
             />
@@ -61,7 +61,7 @@ export default function Nosotros() {
             data-bs-target="#modalValores"
           >
             <img
-              src="/img/valores.jpg"
+              src="/img/vision.jpg"
               alt="Visión"
               className="img-fluid rounded"
             />
