@@ -4,7 +4,13 @@ import "../styles/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+import { useCarrito } from "../context/CarritoContext";
+
 export default function Navbar() {
+  const { carrito } = useCarrito();
+
+  const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
       <div className="container">
@@ -40,6 +46,11 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contacto">Contacto</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/carrito" className="nav-link">
+                🛒 ({totalItems})
+              </Link>
             </li>
           </ul>
 
