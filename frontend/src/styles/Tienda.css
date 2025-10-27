@@ -4,7 +4,7 @@
 .banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 4; /* Mantiene proporción del banner */
+  aspect-ratio: 16 / 6; /* Mantiene proporción del banner */
   overflow: hidden;
   border-radius: 0 0 12px 12px;
   background-color: #e9f5ea;

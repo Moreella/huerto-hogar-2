@@ -7,7 +7,8 @@ import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import Tienda from "./pages/Tienda";
 import Carrito from "./pages/Carrito";
-
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminProductos from "./pages/admin/AdminProductos";
 
 export default function App() {
   return (
@@ -20,7 +21,13 @@ export default function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/tienda" element={<Tienda />} />
         <Route path="/carrito" element={<Carrito />} />
+        {/* RUTAS ADMIN */}
+        <Route path="/admin" element={<AdminLayout />}>
+        <Route path="productos" element={<AdminProductos />} />
+        </Route>
       </Routes>
+      
+
       <Footer />
     </BrowserRouter>
   );
