@@ -39,8 +39,8 @@ export default function App() {
         {/* Rutas de productos */}
         <Route path="/frutas" element={<Frutas />} />
         <Route path="/verduras" element={<Verduras />} />
-        <Route path="/prod-lacteos" element={<Prodlacteos />} />
-        <Route path="/prod-organicos" element={<Prodorganicos />} />
+        <Route path="/prodlacteos" element={<Prodlacteos />} />
+        <Route path="/prodorganicos" element={<Prodorganicos />} />
 
 
 

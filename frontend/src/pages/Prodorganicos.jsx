@@ -47,7 +47,17 @@ export default function Prodorganicos() {
                                     Añadir al carrito
                                 </button>
 
-                                <button className="btn btn-ver-detalle flex-fill">
+                                <button
+                                    className="btn btn-ver-detalle flex-fill"
+                                    onClick={() =>
+                                        handleVerDetalle({
+                                            nombre: "Miel Orgánica",
+                                            descripcion: "Dulces y jugosas.",
+                                            precio: 3500,
+                                            imagen: "/img/p7.jpg",
+                                        })
+                                    }
+                                >
                                     Ver detalle
                                 </button>
                             </div>
@@ -78,11 +88,80 @@ export default function Prodorganicos() {
                                     Añadir al carrito
                                 </button>
 
-                                <button className="btn btn-ver-detalle flex-fill">
+                                <button
+                                    className="btn btn-ver-detalle flex-fill"
+                                    onClick={() =>
+                                        handleVerDetalle({
+                                            nombre: "Quinua Orgánica",
+                                            descripcion: "Dulces y jugosas.",
+                                            precio: 3000,
+                                            imagen: "/img/p8.jpg",
+                                        })
+                                    }
+                                >
                                     Ver detalle
                                 </button>
                             </div>
+                            <Modal show={showModal} onHide={handleCerrarModal} centered>
+                                {productoSeleccionado && (
+                                    <>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>{productoSeleccionado.nombre}</Modal.Title>
+                                        </Modal.Header>
 
+                                        <Modal.Body className="text-center">
+                                            <img
+                                                src={productoSeleccionado.imagen}
+                                                alt={productoSeleccionado.nombre}
+                                                className="img-fluid mb-3 rounded"
+                                                style={{ maxHeight: "250px", objectFit: "cover" }}
+                                            />
+
+                                            <p>{productoSeleccionado.descripcion}</p>
+                                            <p className="fw-bold text-success fs-5">
+                                                ${productoSeleccionado.precio.toLocaleString()}
+                                            </p>
+
+                                            {/* 🔹 Contador de cantidad */}
+                                            <div className="d-flex justify-content-center align-items-center gap-3 my-3">
+                                                <button
+                                                    className="btn btn-outline-secondary"
+                                                    onClick={disminuirCantidad}
+                                                >
+                                                    –
+                                                </button>
+                                                <span className="fs-5">{cantidad}</span>
+                                                <button
+                                                    className="btn btn-outline-secondary"
+                                                    onClick={aumentarCantidad}
+                                                >
+                                                    +
+                                                </button>
+                                            </div>
+
+                                            {/* 🔹 Botón para agregar al carrito */}
+                                            <Button
+                                                variant="success"
+                                                onClick={() => {
+                                                    agregarProducto({
+                                                        ...productoSeleccionado,
+                                                        cantidad: cantidad,
+                                                    });
+                                                    handleCerrarModal();
+                                                }}
+                                            >
+                                                Añadir {cantidad > 1 ? `${cantidad} unidades` : "1 unidad"} al carrito
+                                            </Button>
+                                        </Modal.Body>
+
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleCerrarModal}>
+                                                Cerrar
+                                            </Button>
+                                        </Modal.Footer>
+                                    </>
+                                )}
+                            </Modal>
                         </div>
                     </div>
                 </div>
