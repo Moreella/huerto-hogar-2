@@ -7,6 +7,12 @@ import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
 import Tienda from "./pages/Tienda";
 import Carrito from "./pages/Carrito";
+import Frutas from "./pages/Frutas";
+import Verduras from "./pages/Verduras";
+import Prodlacteos from "./pages/Prodlacteos";
+import Prodorganicos from "./pages/Prodorganicos";
+
+
 
 // 🔹 Rutas Admin (tuyas)
 import AdminLayout from "./pages/admin/AdminLayout";
@@ -41,6 +47,9 @@ export default function App() {
         <Route path="/verduras" element={<Verduras />} />
         <Route path="/prod-lacteos" element={<Prodlacteos />} />
         <Route path="/prod-organicos" element={<Prodorganicos />} />
+
+
+
       </Routes>
 
       <Footer />
