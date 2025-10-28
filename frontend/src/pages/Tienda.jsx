@@ -97,9 +97,16 @@ export default function Tienda() {
               <div className="d-flex justify-content-between gap-2 mt-auto">
                 <button
                   className="btn add-to-cart flex-fill"
-                  data-nombre="Manzanas Fuji"
-                  data-precio="1200"
-                  data-imagen="/img/p2.jpg"
+                  onClick={() =>
+                    agregarProducto({
+                      id: 2,
+                      nombre: "Manzanas Fuji",
+                      descripcion: "Dulces y jugosas.",
+                      precio: 1200,
+                      imagen: "/img/p2.jpg",
+                      cantidad: 1,
+                    })
+                  }
                 >
                   Añadir al carrito
                 </button>

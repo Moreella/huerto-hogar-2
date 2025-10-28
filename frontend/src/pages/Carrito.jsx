@@ -1,8 +1,7 @@
+import { Link } from "react-router-dom";
 import { useCarrito } from "../context/CarritoContext";
 import "../styles/Carrito.css";
 
-
-// primera prueba del carrito 
 export default function Carrito() {
   const { carrito, eliminarProducto, vaciarCarrito, total } = useCarrito();
 
@@ -11,7 +10,7 @@ export default function Carrito() {
       <h1>Tu Carrito</h1>
 
       {carrito.length === 0 ? (
-        <p className="carrito-vacio">Tu carrito está vacío </p>
+        <p className="carrito-vacio">Tu carrito está vacío 🛒</p>
       ) : (
         <>
           <table className="carrito-tabla">
@@ -30,13 +29,16 @@ export default function Carrito() {
                   <td>{item.nombre}</td>
                   <td>${item.precio.toLocaleString("es-CL")}</td>
                   <td>{item.cantidad}</td>
-                  <td>${(item.precio * item.cantidad).toLocaleString("es-CL")}</td>
+                  <td>
+                    ${ (item.precio * item.cantidad).toLocaleString("es-CL") }
+                  </td>
                   <td>
                     <button
                       className="btn-eliminar"
                       onClick={() => eliminarProducto(item.id)}
+                      title="Eliminar producto"
                     >
-                      
+                      🗑️
                     </button>
                   </td>
                 </tr>
@@ -46,9 +48,17 @@ export default function Carrito() {
 
           <div className="carrito-resumen">
             <h3>Total: ${total.toLocaleString("es-CL")}</h3>
-            <button className="btn-vaciar" onClick={vaciarCarrito}>
-              Vaciar carrito
-            </button>
+
+            <div className="carrito-botones">
+              <button className="btn-vaciar" onClick={vaciarCarrito}>
+                Vaciar carrito
+              </button>
+
+              {/* 🔹 Botón para ir al formulario de pago */}
+              <Link to="/pago" className="btn-realizar-pedido">
+                Realizar pedido
+              </Link>
+            </div>
           </div>
         </>
       )}
