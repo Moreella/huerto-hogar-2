@@ -7,20 +7,17 @@ import '../styles/Card-style.css';
 import Categorias from "../components/Categorias";
 import '../styles/ModalProducto.css';
 import '../styles/style-buttons.css';
-
 import { useCarrito } from "../context/CarritoContext";
-
-
 
 
 export default function Tienda() {
 
-  // 🔹 1. Estados primero
+  //  1. Estados
   const [showModal, setShowModal] = useState(false);
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const [cantidad, setCantidad] = useState(1);
 
-  // 🔹 2. Funciones que usan esos estados
+  //  2. Funciones que usan esos estados
   const handleVerDetalle = (producto) => {
     setProductoSeleccionado(producto);
     setCantidad(1); // Reinicia cantidad al abrir modal
@@ -55,7 +52,6 @@ export default function Tienda() {
 
       <main className="container my-5">
         <Categorias />
-        {/* ...resto del contenido */}
       </main>
 
       <section
@@ -63,8 +59,8 @@ export default function Tienda() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          gap: "20px", // 👈 espacio entre imágenes
-          flexWrap: "wrap", // 👈 para que se acomoden si la pantalla es pequeña
+          gap: "20px", //  espacio entre imágenes
+          flexWrap: "wrap", // para que se acomoden si la pantalla es pequeña
         }}
       >
         <img
@@ -97,7 +93,7 @@ export default function Tienda() {
               <p className="fw-bold text-success">$1.200</p>
 
 
-              {/* 🔹 Contenedor de botones alineados */}
+              {/*  Contenedor de botones alineados */}
               <div className="d-flex justify-content-between gap-2 mt-auto">
                 <button
                   className="btn add-to-cart flex-fill"
@@ -141,7 +137,7 @@ export default function Tienda() {
               <p className="card-text">Fresca y 100% natural.</p>
               <p className="fw-bold text-success">$1.000</p>
 
-              {/* 🔹 Contenedor de botones alineados */}
+              {/* Contenedor de botones alineados */}
               <div className="d-flex justify-content-between gap-2 mt-auto">
                 <button
                   className="btn add-to-cart flex-fill"
@@ -183,7 +179,7 @@ export default function Tienda() {
               <p className="card-text">Dulces y jugosas.</p>
               <p className="fw-bold text-success">$1.500</p>
 
-              {/* 🔹 Contenedor de botones alineados */}
+              {/*  Contenedor de botones alineados */}
               <div className="d-flex justify-content-between gap-2 mt-auto">
                 <button
                   className="btn add-to-cart flex-fill"
@@ -474,7 +470,7 @@ export default function Tienda() {
                         ${productoSeleccionado.precio.toLocaleString()}
                       </p>
 
-                      {/* 🔹 Contador de cantidad */}
+                      {/* Contador de cantidad */}
                       <div className="d-flex justify-content-center align-items-center gap-3 my-3">
                         <button
                           className="btn btn-outline-secondary"
@@ -491,7 +487,7 @@ export default function Tienda() {
                         </button>
                       </div>
 
-                      {/* 🔹 Botón para agregar al carrito */}
+                      {/* Botón para agregar al carrito */}
                       <Button
                         variant="success"
                         onClick={() => {

@@ -9,14 +9,6 @@ export default function Nosotros() {
 
   return (
     <main>
-      {/* Banner */}
-      <section className="banner">
-        <img src="/img/nosotros-2.jpg" alt="Nosotros" />
-        <div className="banner-text">
-          <h1>Huerto Hogar</h1>
-          <p>Inicio &gt; Nosotros</p>
-        </div>
-      </section>
 
       {/* Sección principal */}
       <section className="nosotros-section container my-5">

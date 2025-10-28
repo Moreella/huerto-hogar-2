@@ -6,11 +6,11 @@ button,
   background-color: #65b968 !important;
   border: none !important;
   border-radius: 5px !important;
-  padding: 0.25rem 0.9rem !important;
-  font-size: 0.8rem !important;
+  padding: 0.6rem 1.2rem !important;
+  font-size: 1rem !important;
   font-weight: 500;
   color: white !important;
-  transition: all 0.8s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
@@ -18,8 +18,8 @@ button,
 button:hover,
 .btn:hover,
 .navbar-btn:hover {
-  background-color: #4d944f !important;
-  transform: translateY(-1px);
+  background-color: #58a45b !important;
+  transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 

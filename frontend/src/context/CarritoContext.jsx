@@ -19,14 +19,15 @@ export function CarritoProvider({ children }) {
     setCarrito((prev) => {
       const existente = prev.find((item) => item.id === producto.id);
       if (existente) {
-        // Si ya existe, solo aumentamos cantidad
+        // Sumar la cantidad seleccionada, no solo 1
         return prev.map((item) =>
           item.id === producto.id
-            ? { ...item, cantidad: item.cantidad + 1 }
+            ? { ...item, cantidad: item.cantidad + producto.cantidad }
             : item
         );
       }
-      return [...prev, { ...producto, cantidad: 1 }];
+      // Si es nuevo, usar la cantidad recibida (no forzar a 1)
+      return [...prev, { ...producto, cantidad: producto.cantidad }];
     });
   };
 
@@ -52,6 +53,5 @@ export function CarritoProvider({ children }) {
     </CarritoContext.Provider>
   );
 
-  
+
 }
- 
