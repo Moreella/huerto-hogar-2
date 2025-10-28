@@ -37,6 +37,28 @@ export default function Tienda() {
         {/* ...resto del contenido */}
       </main>
 
+      <section
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "20px", // 👈 espacio entre imágenes
+          flexWrap: "wrap", // 👈 para que se acomoden si la pantalla es pequeña
+        }}
+      >
+        <img
+          src="/img/publi.png"
+          alt="publi 1"
+          style={{ width: "500px", height: "auto" }}
+        />
+
+        <img
+          src="/img/publi2.png"
+          alt="publi 2"
+          style={{ width: "380px", height: "auto" }}
+        />
+      </section>
+
       <section className="row g-4 mb-4">
         <h2 className="titulo-seccion mb-4">Todos los productos</h2>
 

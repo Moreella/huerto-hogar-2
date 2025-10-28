@@ -18,12 +18,6 @@ import Prodorganicos from "./pages/Prodorganicos";
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminProductos from "./pages/admin/AdminProductos";
 
-// 🔹 Rutas de productos (Paulina)
-import Frutas from "./pages/Frutas";
-import Verduras from "./pages/Verduras";
-import Prodlacteos from "./pages/Prodlacteos";
-import Prodorganicos from "./pages/Prodorganicos";
-
 export default function App() {
   return (
     <BrowserRouter>

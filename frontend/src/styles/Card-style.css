@@ -15,3 +15,8 @@
 .mt-auto {
   margin-top: auto;
 }
+
+.card-destacado {
+  background-color: #1e541e;
+  color:antiquewhite
+}
