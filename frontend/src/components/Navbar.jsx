@@ -1,10 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/style-buttons.css";
 import "../styles/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-
 import { useCarrito } from "../context/CarritoContext";
+
 
 export default function Navbar() {
   const { carrito } = useCarrito();
