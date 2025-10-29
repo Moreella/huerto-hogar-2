@@ -20,6 +20,7 @@ import PagoDenegado from "./pages/PagoDenegado";
 // 🔹 Rutas Admin
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminProductos from "./pages/admin/AdminProductos";
+import AdminUsuarios from "./pages/admin/AdminUsuarios";
 
 // 🔸 Importante: importar el CarritoProvider
 import { CarritoProvider } from "./context/CarritoContext";
@@ -42,6 +43,7 @@ export default function App() {
           {/* Rutas Admin */}
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="productos" element={<AdminProductos />} />
+            <Route path="usuarios" element={<AdminUsuarios />} />
           </Route>
 
           {/* Rutas de productos */}
