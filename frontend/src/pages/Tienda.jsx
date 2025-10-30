@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,12 +14,12 @@ import { useCarrito } from "../context/CarritoContext";
 
 export default function Tienda() {
 
-  //  1. Estados
+  //  1 Estados
   const [showModal, setShowModal] = useState(false);
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const [cantidad, setCantidad] = useState(1);
 
-  //  2. Funciones que usan esos estados
+  //  2 Funciones que usan esos estados
   const handleVerDetalle = (producto) => {
     setProductoSeleccionado(producto);
     setCantidad(1); // Reinicia cantidad al abrir modal
@@ -97,9 +99,16 @@ export default function Tienda() {
               <div className="d-flex justify-content-between gap-2 mt-auto">
                 <button
                   className="btn add-to-cart flex-fill"
-                  data-nombre="Manzanas Fuji"
-                  data-precio="1200"
-                  data-imagen="/img/p2.jpg"
+                  onClick={() =>
+                    agregarProducto({
+                      id: 2,
+                      nombre: "Manzanas Fuji",
+                      descripcion: "Dulces y jugosas.",
+                      precio: 1200,
+                      imagen: "/img/p2.jpg",
+                      cantidad: 1,
+                    })
+                  }
                 >
                   Añadir al carrito
                 </button>
