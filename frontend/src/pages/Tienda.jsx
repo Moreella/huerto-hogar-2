@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,12 +14,12 @@ import { useCarrito } from "../context/CarritoContext";
 
 export default function Tienda() {
 
-  //  1. Estados
+  //  1 Estados
   const [showModal, setShowModal] = useState(false);
   const [productoSeleccionado, setProductoSeleccionado] = useState(null);
   const [cantidad, setCantidad] = useState(1);
 
-  //  2. Funciones que usan esos estados
+  //  2 Funciones que usan esos estados
   const handleVerDetalle = (producto) => {
     setProductoSeleccionado(producto);
     setCantidad(1); // Reinicia cantidad al abrir modal

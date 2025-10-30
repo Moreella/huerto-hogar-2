@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Home() {
   return (
     <main className="d-flex flex-column align-items-center justify-content-center text-center min-vh-100 bg-light">

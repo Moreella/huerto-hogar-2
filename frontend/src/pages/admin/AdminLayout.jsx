@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Outlet, Link } from "react-router-dom";
 import "../../styles/Admin.css";
 

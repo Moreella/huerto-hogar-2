@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ✅ Configuración limpia y compatible con React 18
+// Configuración limpia y compatible con React 18
 export default defineConfig({
   plugins: [react()],
   test: {
